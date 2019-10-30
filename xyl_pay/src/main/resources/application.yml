@@ -1,0 +1,37 @@
+
+###################  spring dev 配置  ###################
+server:
+  port: 8094
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    jinlundb:
+      url: jdbc:mysql://10.1.1.68:3306/paydb?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 123456
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      initialSize: 5
+      minIdle: 5
+      maxActive: 200
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      testConnectionOnCheckout: false
+      poolPreparedStatements: true
+      filters: stat,wall,log4j,mergeStat
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  alipay:
+    GATEWAYURL: https://openapi.alipay.com/gateway.do
+    APP_ID: 2019092367720650
+    APP_PRIVATE_KEY: MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC6C+S6+V8M9CRBNtK6d2ZammEWbZLVfB2wfKqMyHMTpUJkkhEdJJiz6lyno6/HvdkBf/JYfl8MnvAP4eo9tuWWqRgll0JjqhdpBwdAoeSKjdsOKzk5ieHzUAxQpIWSMwCXRh8FayZ9SflTZbktvT3zbeD5JO+gdIPmZmA0sDlz4ND5DP8YrisjpvYTDjDbXYsdwO+/B+vueoNgxUVPaf7K5dRBAoCesBawsSWuuc9FuAf8aMNspWgaeHjWdF38YM3kBVbrUfp0tlEyjUsQ+jd0GsZUo2D8p6Y6CgY+UXyvCcfXbrosSnF2mddyrAqSgvJkpFZTQOtLgS5mJYii4Q7DAgMBAAECggEAHgsDoanZTocyP5Gxz8iuL51UZkHFf1HunWxUQi2wX5DFOuZXeyRIwGztD2kgXpnqrBJUOTQW9zvHOllZ8SNSydR+gLt/TgbOhvhKlIZQGIu1vwD92avJX/giNPeMVkKEKul44vAdpAfJCk2X7KntkhzBQppTU87c6dzIVlnKvUpe8sksQ9+V2Seh5KdTfSQ4Wnz0WRmSyybvks84fWvezysJlOWqIsVmA3wGJexmB53ehG99UOrVgsBtkWwaWDp6JHA202X/F+nlxKYjN6bH3aH4Bbec2aGMiSmj+b3tsignEzPHNfm4G1PKh5/R21Aqj60Qfpr7tD5ohc+hr3uF+QKBgQDo2Jew3WMy5+aUEE0gHVCQs+8WRHGjoaJ6L9CF5B+3vXot/7ls6/vGuydPYy+VtNGtsQoE3J66pDFdbdUsj5cW0RN7PawgyH6+VQrGb3sIBeJv2l9STHtZKKlJX8lr26IyY95cU/dQZfCE2WWCAphxyxtOHOSxQrsiyrgArj+qnwKBgQDMi/RZTzRiGA9cduJAEgUziEqVoBVBxoyL3tALbpI8h2m+l2tN/Bt2bHRK/NZmRK4uT2KrTDf3RmIxHEl4Y77L7Xda2mc2DjW+MzdjU6FN8q/kT0PsNj9DAw2khm9PHMBnJMgQyFAUSrHwCikbajQjkeBN9ZfACjjnY8moZCoNXQKBgQDPpwlws58Z8PITLY56i2okAjPAef2WXjmWGjoujckzhYkGqL5mwvVgv9tI0z3GluE/s1kqCM6NyIw1tBOej9fAg2iKSe/NtMBDYXggi57/ArBz7B2COa7vTnHae9AXnmHB6oqNcFxomOCsuWvrTAFDykxplx7kboyRdJQwFzW0JQKBgQCp9w2GfJshe66f/aVI6fBqfrDDHe8r5cj5nJ6xMSLQqxDCL14Zwggr4jjL6sZY2m8Fyi9J+Z5zmYeUGVYvdGqhV2QbGWoz76DWuAYpQd/CPovLodXl3Lm6fDoE4TRyv4hc7KJV1606/0pWFItN3XUPrXJ+NTnweE4Kb8+sXfbXfQKBgQC2xDzv5jBn9YUJ/RZ16VqLFthhn4zhjs6Dpa9CNQfCWRICuBp1VwFlFTS7UMO8Lp9hGBtURe5m86iE2+MmLG8ObH0VFw7LJqD+yDf/4xs7sQcp5zxuupA/swqsSEWh0Z857jQ3V20oJMbopWEMSxGZKGZkE0+ZWf3I8hjEZFczrw==
+    FORMAT: json
+    CHARSET: utf-8
+    ALIPAY_PUBLIC_KEY: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx+UKzmJeQYLBMKbtqrpmH/rYSdsUOXcJBUfas3NqRsWeeSHslP2YLncLldoh/VnOAMyfnSH0hnzCuFAJdv12hogNSNjT9Dv2XO1tCFgv3I+ShAd7v8WyWc4ci1eA79xLb01KN/jn8e/UyAq2IKKJReW6oradz/V5MEn2cvBYaIYb/8c8ELHrFX62/3F9cY2pSszZM/KXUr/Z43oyF/FM4vC80X9a9H/hnLLIgmv0EJfb32R7Rb23SLQbzEq/JeE9RdxTDlUobVgT6E+M/85wr1JPqwyq9gyb1/Qp82cwggENKHnCHkIMVkBuMbUjujHzY2vEilYHM5Z4H/ZKMREhMQIDAQAB
+    SIGN_TYPE: RSA2

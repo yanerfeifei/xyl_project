@@ -1,0 +1,114 @@
+@font-face {
+    font-family: MyCustomFont;
+    src: url("../font/msyh.ttf") /* TTF file for CSS3 browsers */
+}
+body{
+    width: 1240px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 16px;
+    font-family: MyCustomFont;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+/* page-break-inside:avoid */
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+h3{
+    margin: 0;
+}
+ul,ul li{
+    list-style: none;
+}
+/* 中对齐 */
+.align-m{
+    text-align: center;
+}
+.margin-r-32{
+    margin-right: 32px;
+}
+.justify { 
+    display: inline-block;
+    width:200px;
+    text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+.table-list td{
+    padding: 16px;
+    border: 1px solid #e8e8e8;
+}
+.table-list tr td:first-child{
+    text-align: center;
+    width: 116px;
+    border-left: none;
+}
+.table-list tr td:last-child{
+    border-right: none;
+}
+.base-info td{
+    padding: 8px;
+}
+.wrapper .main{
+    position: relative;
+    width:100%;
+    /* page-break-before: left; */
+    vertical-align: middle;
+    width: 1012px;
+    margin: 0 auto;
+}
+.break-page{
+    overflow: visible;
+}
+.bg-white{
+    background-color: white;
+}
+.wrapper .top{
+    font-size: 22px;
+    line-height: 80px;
+    vertical-align: middle;
+    position: relative;
+}
+.wrapper .top img{
+   position: absolute;
+   top: 24px;
+   left: 36px;
+}
+
+.wrapper h3{
+    background-color: #f1f1f1;
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 38px;
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.wrapper .area .base-info-cont{
+    padding: 10px 20px;
+}
+.wrapper .area .cont{
+    padding: 16px 20px;
+}
+
+.wrapper .table-list span,.wrapper .cont span{
+    margin-right: 40px;
+} 
